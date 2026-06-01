@@ -7,20 +7,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #0ea5e9;
-      --primary-dark: #0284c7;
-      --accent: #06b6d4;
-      --accent-light: #22d3ee;
-      --bg-deep: #060e1a;
-      --bg-main: #0a1628;
-      --bg-card: #0f2035;
-      --bg-card-hover: #162a45;
-      --border-glow: rgba(14,165,233,0.25);
-      --text-bright: #f0f9ff;
-      --text-main: #e2e8f0;
-      --text-muted: #94a3b8;
-      --green: #22c55e;
-      --green-glow: rgba(34,197,94,0.4);
+      --primary: #4CAF50;
+      --primary-dark: #388E3C;
+      --accent: #66BB6A;
+      --accent-light: #81C784;
+      --bg-deep: #f1f8e9;
+      --bg-main: #e8f5e9;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f8e9;
+      --border-glow: rgba(76,175,80,0.25);
+      --text-bright: #1b5e20;
+      --text-main: #2e7d32;
+      --text-muted: #388E3C;
+      --green: #4CAF50;
+      --green-glow: rgba(76,175,80,0.4);
       --orange: #f59e0b;
       --orange-glow: rgba(245,158,11,0.4);
       --red: #ef4444;
@@ -55,8 +55,8 @@
       position: absolute;
       inset: 0;
       background-image:
-        linear-gradient(rgba(14,165,233,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(14,165,233,0.03) 1px, transparent 1px);
+        linear-gradient(rgba(76,175,80,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(76,175,80,0.03) 1px, transparent 1px);
       background-size: 60px 60px;
       pointer-events: none;
       z-index: 0;
@@ -69,7 +69,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 0 40px;
-      background: linear-gradient(180deg, rgba(10,22,40,0.98), rgba(10,22,40,0.85));
+      background: linear-gradient(180deg, rgba(76,175,80,0.98), rgba(76,175,80,0.85));
       border-bottom: 1px solid var(--border-glow);
       z-index: 10;
       flex-shrink: 0;
@@ -92,15 +92,13 @@
       font-weight: 900;
       font-size: 18px;
       color: #fff;
-      box-shadow: 0 0 20px rgba(14,165,233,0.3);
+      box-shadow: 0 0 20px rgba(76,175,80,0.3);
     }
 
     .header-title {
       font-size: 22px;
       font-weight: 900;
-      background: linear-gradient(90deg, var(--primary), var(--accent-light));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: #fff;
       letter-spacing: 2px;
     }
 
@@ -114,13 +112,13 @@
       font-family: var(--font-digital);
       font-size: 18px;
       font-weight: 700;
-      color: var(--accent-light);
+      color: #fff;
       letter-spacing: 1px;
     }
 
     .header-date {
       font-size: 14px;
-      color: var(--text-muted);
+      color: rgba(255,255,255,0.85);
       font-weight: 700;
     }
 
@@ -128,9 +126,9 @@
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: var(--green);
+      background: #fff;
       animation: pulse-dot 2s infinite;
-      box-shadow: 0 0 8px var(--green-glow);
+      box-shadow: 0 0 8px rgba(255,255,255,0.6);
     }
 
     @keyframes pulse-dot {
@@ -145,8 +143,8 @@
       align-items: center;
       justify-content: center;
       gap: 0;
-      background: rgba(10,22,40,0.9);
-      border-bottom: 1px solid rgba(14,165,233,0.1);
+      background: rgba(76,175,80,0.9);
+      border-bottom: 1px solid rgba(76,175,80,0.1);
       z-index: 10;
       flex-shrink: 0;
     }
@@ -159,7 +157,7 @@
       gap: 10px;
       font-size: 16px;
       font-weight: 700;
-      color: var(--text-muted);
+      color: rgba(255,255,255,0.7);
       cursor: pointer;
       border: none;
       background: none;
@@ -173,7 +171,7 @@
     }
 
     .tab-btn.active {
-      color: var(--primary);
+      color: #fff;
     }
 
     .tab-btn.active::after {
@@ -184,9 +182,9 @@
       transform: translateX(-50%);
       width: 60%;
       height: 3px;
-      background: linear-gradient(90deg, var(--primary), var(--accent));
+      background: #fff;
       border-radius: 3px 3px 0 0;
-      box-shadow: 0 0 12px rgba(14,165,233,0.5);
+      box-shadow: 0 0 12px rgba(255,255,255,0.5);
     }
 
     .tab-btn svg {
@@ -283,7 +281,7 @@
 
     .metric-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 32px rgba(14,165,233,0.15);
+      box-shadow: 0 8px 32px rgba(76,175,80,0.15);
     }
 
     .metric-card::before {
@@ -347,14 +345,14 @@
       padding: 14px 18px;
       background: var(--bg-card);
       border-radius: 10px;
-      border: 1px solid rgba(14,165,233,0.1);
+      border: 1px solid rgba(76,175,80,0.1);
     }
 
     .info-item-icon {
       width: 40px;
       height: 40px;
       border-radius: 10px;
-      background: rgba(14,165,233,0.1);
+      background: rgba(76,175,80,0.1);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -448,7 +446,7 @@
       display: grid;
       grid-template-columns: 220px 1fr 100px 90px;
       padding: 14px 20px;
-      background: rgba(14,165,233,0.08);
+      background: rgba(76,175,80,0.08);
       border-bottom: 1px solid var(--border-glow);
       font-size: 13px;
       font-weight: 900;
@@ -461,13 +459,13 @@
       display: grid;
       grid-template-columns: 220px 1fr 100px 90px;
       padding: 12px 20px;
-      border-bottom: 1px solid rgba(14,165,233,0.06);
+      border-bottom: 1px solid rgba(76,175,80,0.06);
       align-items: center;
       transition: background 0.2s;
     }
 
     .gantt-row:hover {
-      background: rgba(14,165,233,0.04);
+      background: rgba(76,175,80,0.04);
     }
 
     .gantt-row:last-child {
@@ -562,7 +560,7 @@
       display: grid;
       grid-template-columns: 220px 1fr;
       padding: 8px 20px;
-      background: rgba(14,165,233,0.04);
+      background: rgba(76,175,80,0.04);
       border-bottom: 1px solid var(--border-glow);
     }
 
@@ -579,7 +577,7 @@
       font-size: 11px;
       font-weight: 700;
       color: var(--text-muted);
-      border-left: 1px solid rgba(14,165,233,0.15);
+      border-left: 1px solid rgba(76,175,80,0.15);
       padding-left: 6px;
       flex: 1;
     }
@@ -609,7 +607,7 @@
       width: 100px;
       height: 100px;
       border-radius: 50%;
-      background: rgba(14,165,233,0.06);
+      background: rgba(76,175,80,0.06);
     }
 
     .kpi-label {
@@ -915,7 +913,7 @@
       <!-- ===== TAB1: 首页 ===== -->
       <div class="tab-page active" id="tab1">
         <div class="project-hero">
-          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80" alt="项目效果图" onerror="this.src='https://placehold.co/1920x400/0a1628/0ea5e9?text=启城雅苑A-01地块效果图'">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80" alt="项目效果图" onerror="this.src='https://placehold.co/1920x400/e8f5e9/4CAF50?text=启城雅苑A-01地块效果图'">
           <div class="project-hero-overlay">
             <div class="project-hero-title">启城雅苑 A-01 地块</div>
             <div class="project-hero-sub">北京启城房地产开发有限公司 · 北京市朝阳区安和街东侧</div>
@@ -1274,7 +1272,7 @@
       text.setAttribute('x', cx);
       text.setAttribute('y', cy - 4);
       text.setAttribute('text-anchor', 'middle');
-      text.setAttribute('fill', '#f0f9ff');
+      text.setAttribute('fill', '#1b5e20');
       text.setAttribute('font-size', '18');
       text.setAttribute('font-weight', '900');
       text.setAttribute('font-family', 'Orbitron, monospace');
@@ -1284,7 +1282,7 @@
       subtext.setAttribute('x', cx);
       subtext.setAttribute('y', cy + 14);
       subtext.setAttribute('text-anchor', 'middle');
-      subtext.setAttribute('fill', '#94a3b8');
+      subtext.setAttribute('fill', '#388E3C');
       subtext.setAttribute('font-size', '9');
       subtext.setAttribute('font-weight', '700');
       subtext.setAttribute('font-family', 'Noto Sans SC, sans-serif');
